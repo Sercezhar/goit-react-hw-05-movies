@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 import noPoster from '../../assets/no-image-poster-small.jpg';
 import styles from './MoviesList.module.css';
@@ -29,3 +30,14 @@ export function MoviesList({ movies, to }) {
     </ul>
   );
 }
+
+MoviesList.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      poster_path: PropTypes.string.isRequired,
+    })
+  ),
+  to: PropTypes.string.isRequired,
+};
