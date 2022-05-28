@@ -29,7 +29,7 @@ export function Cast() {
                       : noPhoto
                   }
                   alt={name}
-                  width="100"
+                  width="150"
                 />
                 <h3>{name}</h3>
                 <p>{character}</p>

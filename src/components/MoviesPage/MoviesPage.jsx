@@ -3,6 +3,7 @@ import { fetchMovieByQuery } from 'services/movies-api-set';
 import { IoSearch } from 'react-icons/io5';
 import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { Container } from 'components/utils/Container';
 import { MoviesList } from 'components/MoviesList';
 import styles from './MoviesPage.module.css';
 
@@ -45,7 +46,7 @@ export function MoviesPage() {
   }
 
   return (
-    <>
+    <Container>
       <form className={styles.SearchForm} onSubmit={handleSubmit}>
         <input
           className={styles['SearchForm-input']}
@@ -62,7 +63,7 @@ export function MoviesPage() {
       </form>
 
       {movies && <MoviesList movies={movies} to={''} />}
-    </>
+    </Container>
   );
 }
 
