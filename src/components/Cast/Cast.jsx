@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useLayoutEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieCast } from 'services/movies-api-set';
 import noPhoto from '../../assets/no-image-actor.jpg';
@@ -13,6 +13,13 @@ export function Cast() {
       setCast(result.cast);
     });
   }, [movieId]);
+
+  useLayoutEffect(() => {
+    window.scrollBy({
+      top: document.documentElement.clientHeight - 160,
+      behavior: 'smooth',
+    });
+  }, [cast]);
 
   return (
     <>
