@@ -15,6 +15,10 @@ export function Cast() {
   }, [movieId]);
 
   useLayoutEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     window.scrollBy({
       top: document.documentElement.clientHeight - 160,
       behavior: 'smooth',
