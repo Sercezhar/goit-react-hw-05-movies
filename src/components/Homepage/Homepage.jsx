@@ -1,7 +1,7 @@
 import styles from './Homepage.module.css';
 import { fetchTrendingMovies } from 'services/movies-api-set';
 import { useEffect, useState } from 'react';
-import { Container } from 'components/utils/Container';
+import { Container } from 'utils/Container';
 import { MoviesList } from 'components/MoviesList';
 
 export function Homepage() {
