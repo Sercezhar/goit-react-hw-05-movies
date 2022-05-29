@@ -10,9 +10,7 @@ export function Appbar() {
           <Navigation />
         </div>
       </header>
-      <main>
-        <Outlet />
-      </main>
+      <Outlet />
     </>
   );
 }
