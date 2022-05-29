@@ -8,8 +8,11 @@
   padding: 10px 35px 10px 10px;
   width: 370px;
   border: 2px solid var(--theme-color-secondary);
-  border-radius: 5px;
-  outline-color: var(--theme-color);
+  outline: none;
+}
+
+.SearchForm-input:focus {
+  border-color: var(--theme-color);
 }
 
 .SearchForm-input,
